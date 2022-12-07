@@ -10,7 +10,7 @@ namespace DemoNMemory
     {
         public MyDatabase()
         {
-            CreateCidadeEstoado();
+            CreateCidadeEstado();
             PopularDados();
         }
         private void PopularDados()
@@ -25,7 +25,7 @@ namespace DemoNMemory
             this.Cidades.Insert(new Cidade() { Id = 2, Nome = "Cidade_2", EstadoId = 2 });
         }
 
-        private void CreateCidadeEstoado()
+        private void CreateCidadeEstado()
         {
             var estado = base.Tables.Create<Estado, int>(g => g.Id);
             var cidade = this.Tables.Create<Cidade, int>(x => x.Id);
